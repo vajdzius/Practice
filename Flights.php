@@ -5,6 +5,7 @@ calculatePrices (250000, 0.3);
 function calculatePrices ($costs, $margin)
 {
 	define ("FIRST_CLASS", "10");
+	//$FIRST_CLASS = 10;
 	define ("BUSINESS_CLASS", "30");
 	define ("ECONOMY_CLASS", "280");
 
@@ -17,6 +18,11 @@ function calculatePrices ($costs, $margin)
 	define ("FILL_ECONOMY", "0.68");
 
 	$amounts = ((FIRST_CLASS * FILL_FIRST * PRICE_FIRST) + (BUSINESS_CLASS * FILL_BUSINESS * PRICE_BUSINESS) + (ECONOMY_CLASS * FILL_ECONOMY * PRICE_ECONOMY));
+
+	//$amounts = calculatePrices ($FIRST_CLASS, $PRICE_FIRST, $FILL_FIRST);
+	//$amounts += calculatePrices ($BUSINESS_CLASS, $PRICE_BUSINESS, $FILL_BUSINESS);
+	//$amounts += calculatePrices ($ECONOMY_CLASS, $PRICE_ECONOMY, $FILL_ECONOMY);
+
 	$minIncome = $costs * (1 + $margin);
 	$marginSum = $amounts - $costs;
 	$percentageOfMargin = ((($amounts/$costs) * 100) - 100);
