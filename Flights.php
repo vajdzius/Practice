@@ -21,7 +21,7 @@ function calculatePrices ($costs, $margin)
 	var FILL_FIRST = 1;
 	var FILL_BUSINESS = 0.8;
 	var FILL_ECONOMY = 0.68;
-}	define ("FILL_FIRST", "1");
+	define ("FILL_FIRST", "1");
 	define ("FILL_BUSINESS", "0.8");
 	define ("FILL_ECONOMY", "0.68");
 
